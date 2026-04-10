@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 
 export default function DeviceHero() {
   return (
@@ -28,16 +27,20 @@ export default function DeviceHero() {
           {/* Scan line */}
           <div className="scan-line" />
 
-          {/* Top face — logo area */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Image
-              src="https://skyfri.com/assets/skyfri-logo-name-white-B1g7qFGC.png"
-              alt="Skyfri"
-              width={160}
-              height={48}
-              className="w-36 h-auto"
-              style={{ filter: 'brightness(0) saturate(100%) invert(35%) sepia(90%) saturate(2000%) hue-rotate(210deg) brightness(105%)' }}
-            />
+          {/* Top face — Skyfri mark */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            {/* Skyfri mark — 4 bent arms pinwheel */}
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* NW arm: diagonal NW then bends N */}
+              <path d="M26 26 L14 14 L14 4" stroke="#1d6bff" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* SW arm: diagonal SW then bends W */}
+              <path d="M26 26 L14 38 L4 38" stroke="#1d6bff" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* SE arm: diagonal SE then bends S */}
+              <path d="M26 26 L38 38 L38 48" stroke="#1d6bff" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* NE arm: diagonal NE then bends E */}
+              <path d="M26 26 L38 14 L48 14" stroke="#1d6bff" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <p className="text-[#1d6bff] text-[9px] tracking-[0.25em] uppercase font-semibold" style={{ fontFamily: 'var(--font-geist-sans)' }}>Skyfri</p>
           </div>
 
           {/* Corner screws */}
