@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -8,14 +9,7 @@ interface Message {
 }
 
 function SkyfriMark() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M26 26 L14 14 L14 4" stroke="#1d6bff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M26 26 L14 38 L4 38" stroke="#1d6bff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M26 26 L38 38 L38 48" stroke="#1d6bff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M26 26 L38 14 L48 14" stroke="#1d6bff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-  );
+  return <Image src="/favicon.png" alt="Skyfri" width={18} height={18} className="rounded-sm" />;
 }
 
 function MessageBubble({ message }: { message: Message }) {
