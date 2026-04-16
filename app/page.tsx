@@ -36,28 +36,6 @@ export default function Home() {
       {/* NAV */}
       <Nav />
 
-      {/* AWARDS */}
-      <div className="border-b border-blue-500/10" style={{ background: 'rgba(8,14,32,0.9)' }}>
-        <div className="max-w-5xl mx-auto px-8 py-8 flex flex-col items-center gap-5">
-          <p className="text-white/20 text-[10px] tracking-[0.35em] uppercase font-mono">Awards & Recognition</p>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            {[
-              { src: '/award-american-made-solar.png', alt: 'American Made Solar Prize — U.S. Department of Energy', w: 120 },
-              { src: '/award-climate.png', alt: 'Climate Award', w: 110 },
-              { src: '/award-global-startup.png', alt: 'Global Startup Awards', w: 130 },
-            ].map(({ src, alt, w }) => (
-              <div
-                key={src}
-                className="flex items-center justify-center rounded-xl px-6 py-4"
-                style={{ background: 'rgba(255,255,255,0.96)', minWidth: 160, minHeight: 90 }}
-              >
-                <Image src={src} alt={alt} width={w} height={72} className="object-contain" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* HERO */}
       <section className="relative min-h-screen grid-bg flex flex-col md:flex-row items-center pt-28 pb-16 px-8 md:px-20 gap-12 overflow-hidden">
 
@@ -132,6 +110,28 @@ export default function Home() {
               <p className="text-white/30 text-xs tracking-widest uppercase mt-1">{l}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* AWARDS */}
+      <div className="border-b border-blue-500/10" style={{ background: 'rgba(8,14,32,0.9)' }}>
+        <div className="max-w-5xl mx-auto px-8 py-10 flex flex-col items-center gap-6">
+          <p className="text-white/20 text-[10px] tracking-[0.35em] uppercase font-mono">Awards & Recognition</p>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {[
+              { src: '/award-american-made-solar.png', alt: 'American Made Solar Prize — U.S. Department of Energy', w: 160 },
+              { src: '/award-climate.png', alt: 'Climate Award', w: 150 },
+              { src: '/award-global-startup.png', alt: 'Global Startup Awards', w: 170 },
+            ].map(({ src, alt, w }) => (
+              <div
+                key={src}
+                className="flex items-center justify-center rounded-xl px-8 py-5"
+                style={{ background: 'rgba(255,255,255,0.96)', minWidth: 200, minHeight: 110 }}
+              >
+                <Image src={src} alt={alt} width={w} height={90} className="object-contain" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
