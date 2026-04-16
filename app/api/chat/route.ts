@@ -159,7 +159,7 @@ ${confluenceContext
 Always use the website knowledge base above as your primary and authoritative source of truth — especially for facts like countries, products, and customers. If you don't have enough information to fully answer a question, be honest about it and warmly invite them to reach out at support@skyfri.com. For sales or partnership enquiries, point them to sales@skyfri.com.`;
 
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 1024,
       system: systemPrompt,
       messages: messages.map((m: any) => ({
